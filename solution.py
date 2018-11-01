@@ -34,6 +34,7 @@ def localSearch(tspInit):
             items[j],items[i] = items[i],items[j]
             if i != j:
                 print(price(items)[0], "->", price(items)[1])
+
             if price(items)[1] < price(tspInit)[1]:
                 return localSearch(items)
 
